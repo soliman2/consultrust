@@ -1,0 +1,250 @@
+@import "helpers/variables.scss";
+/**Start Arabic Menu**/
+
+body {
+    text-align: right !important;
+}
+
+// Start Home Page
+/*Navbar */
+
+// Notification Area
+.notification_area .notification_area-list {
+    left: 40%;
+    right: auto;
+}
+
+
+.notification_area .notification_button {
+    @media (min-width: $lg) {
+        margin-left: 50px;
+        margin-right: 0;
+    }
+
+}
+
+.login_area-content .login_button {
+    @media (min-width: $lg) {
+        margin-right: 0;
+        margin-left: 50px;
+    }
+}
+
+.navbar_menu {
+    @media (min-width: $lg) {
+        padding-right: 20px;
+        padding-left: 0;
+        /*Change*/
+    }
+}
+
+.navbar_dropdown-menu {
+    /*Dropdown Menu For Descktop*/
+    @media (min-width: $lg) {
+        right: -47px;
+    }
+}
+
+.dropdown_link i {
+    padding-right: 8px;
+    right: 50px;
+}
+
+/*Navbar */
+
+/**Header Slider Dotes****/
+
+.header_slider {
+    .slick-dots {
+        text-align: right;
+    }
+}
+
+.navbar_menu li a i {
+    right: 200px;
+    left: auto;
+}
+
+.header {
+    &:before {
+        background-image: linear-gradient(to left, rgba(0, 147, 255, 0.8), rgba(44, 56, 144, 0.8));
+    }
+}
+
+/*01=Start variables*/
+
+.home_page-title {
+    padding-right: 20px;
+
+    &:before {
+        right: 0;
+    }
+}
+
+// =06= Start Testmonial Section
+.testmonial_block {
+    i {
+        &[class*="fa-quote-right"] {}
+
+        &[class*="fa-quote-left"] {
+            float: right;
+        }
+    }
+}
+
+// =06= End Testmonial Section
+/*01=End variables*/
+
+/*ٍStart Single Page For All Pagees*/
+
+// bread_crumb
+.head_page {
+    .head_page-content {
+        .bread_crumb {
+            li {
+                a {
+                    margin-left: 20px;
+                    margin-right: 0;
+                    /*Change*/
+                    &:before {
+                        content: "\f100";
+                        /*Change*/
+                        left: -18px;
+                        right: auto;
+                        /*Change*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Home Page
+// Search Advanced Section
+.provider_search .search_content .advanced_search-button {
+    margin-right: 18px;
+    margin-left: 0;
+}
+
+/*****Font******/
+
+/*Start Custume Select Button*/
+
+.custum_select {
+    &:before {
+        left: 20px;
+        right: auto;
+        /*Change*/
+    }
+}
+
+/*Start Registration Popup*/
+
+/*Start Registration*/
+
+#sign_in {
+    .modal-body {
+        .forget_password {
+            text-align: left !important;
+        }
+    }
+}
+
+/*Footer of Registration Screen*/
+
+.modal-footer {
+    span {
+        &:before {
+            content: "\f30a";
+            left: -20px;
+            right: auto;
+        }
+    }
+}
+
+/*End of Registration Screen*/
+
+/*Start Blog Details Page*/
+
+.blog_details-img {
+    display: inline-block;
+    float: left;
+    /*Change*/
+}
+
+/*Start My Account Pages*/
+
+// Start Profile Menue 
+.profile_menu {
+    // on Mobile
+    @media (max-width: $md) {
+        right: -300px;
+        left: auto;
+    } // Open Profile Menu on Mobile
+    &.switch {
+        @media (max-width: $md) {
+            right: 0px;
+            left: auto;
+        }
+    }
+
+    .show_menu {
+
+        left: -40px;
+        right: auto;
+        i {
+            transform: rotate(0deg)
+        }
+        &.switch {
+            i {
+                transform: rotate(180deg)
+            }
+        }
+    }
+
+    .add_image {
+        .back_button {
+            &:before {
+                transform: rotate(270deg);
+            }
+        }
+    } // Start Menu List
+}
+
+// Start About Us Page
+.about_us .title{
+    margin-right: 50px;
+    margin-left: 0;
+    &:before{
+        right: -60px;
+        left: auto;
+    }
+}
+// End About Us Page
+// End Profile Menue
+/*End My Account Pages*/
+
+/*End Blog Details Page*/
+
+a,
+bdi,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+label,
+label,
+li,
+option,
+p,
+select,
+span,
+td,
+textarea,
+th {
+    font-family: 'Cairo', sans-serif;
+}

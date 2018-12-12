@@ -1,0 +1,385 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss";
+@import "componants/slider-custum.scss"; /***********/
+// =01= Start What Coach Section
+
+.what_coatch {
+  background-color: $grayColor;
+  @media(max-width: $lg) {
+    margin-top: 30px;
+  }
+
+  div[class*="col"] {
+    @media(max-width: $lg) {
+      margin-top: 30px;
+    }
+  }
+
+  .Block {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 7, 58, 0.15);
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    .coach_img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .coach_description {
+      padding: 15px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #FB647D;
+      }
+
+      .home_page-title {
+        font-size: 20px;
+        color: #000;
+
+        &::before {
+          background-color: #FB647D;
+        }
+      }
+    }
+  }
+}
+
+div[class*="col"]:first-child {
+  .coach_description {
+    &:before {
+      background-color: #1EDDEC;
+    }
+
+    .home_page-title {
+      &:before {
+        background-color: #1EDDEC;
+      }
+    }
+  }
+}
+
+div[class*="col"]:last-child {
+  .coach_description {
+    &:before {
+      background-color: #8258E8;
+    }
+
+    .home_page-title {
+      &:before {
+        background-color: #8258E8;
+      }
+    }
+  }
+}
+// =01= End What Coach Section
+// =02= Start Why Us Section
+
+.why_us {
+  background-image: $gradiantColor;
+
+  .why_us-block {
+    color: #fff;
+
+    .home_page-title {
+      color: #fff;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    .paragraph_global {
+      color: #fff;
+    }
+  }
+
+  .why_us-img {
+    @media (max-width:$lg) {
+      margin-top: 30px;
+    }
+  }
+}
+// =02= End Why Us Section
+// =03= Start Category Section
+
+.home_category-coach {
+  .category_block {
+    margin-top: 30px;
+    height: 250px;
+    position: relative;
+    display: block;
+    @extend %transition;
+
+    h3 {
+      font-size: 18px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: 0;
+      padding: 15px;
+      color: #fff;
+      background-color: $mainColor;
+      transition: all ease-in-out 0.5s;
+    }
+
+    &:hover {
+      h3 {
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        line-height: 250px;
+        background-color: transparent;
+        background-image: linear-gradient(to top, rgba(0, 147, 255, 0.86), rgba(44, 55, 142, 0.85));
+      }
+    }
+  }
+}
+// =03= End Category Section
+// =04= Start How Use Section
+
+.how_use {
+  position: relative;
+  background-attachment: fixed;
+
+  div[class*="col"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .row {
+    position: relative;
+
+    &:before {
+      @media (min-width:$lg) {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 100px;
+        top: 53%;
+      }
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to left, rgba(0, 147, 255, 0.91), rgba(44, 56, 144, 0.88));
+  }
+
+  .home_page-title {
+    color: #fff;
+
+    &::before {
+      background-color: #fff;
+    }
+  }
+
+  .how_use-block {
+    margin-top: 30px;
+    @media (min-width:$lg) {
+      margin-top: 280px;
+    }
+
+    .icon {
+      height: 80px;
+      width: 80px;
+      line-height: 80px;
+      border-radius: 100%;
+      text-align: center;
+      background-color: #fff;
+      margin: 0 auto;
+
+      img {
+        display: inline-block;
+      }
+    }
+
+    span {
+      @media (min-width: $lg) {
+        margin: 0 auto;
+        height: 8px;
+        width: 8px;
+        border-radius: 100%;
+        background-color: #fff;
+        display: block;
+        margin-top: 20px;
+        position: relative;
+      }
+
+      &:before {
+        @media (min-width: $lg) {
+          position: absolute;
+          display: block;
+          content: "";
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          top: 20px;
+          background-color: #fff;
+        }
+      }
+
+      &:after {
+        @media (min-width: $lg) {
+          position: absolute;
+          display: block;
+          content: "";
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          top: 40px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .description {
+      text-align: center;
+      padding-top: 20px;
+      @media (min-width:$lg) {
+        padding-top: 60px;
+      }
+
+      h3 {
+        margin: 0;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .paragraph_global {
+        color: #fff;
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .block {
+    span {
+      @media (min-width:$lg) {
+        margin-top: -150px;
+      }
+    }
+
+    .description {
+      @media (min-width:$lg) {
+        margin-top: -250px;
+      }
+    }
+  }
+}
+// =04= End How Use Section
+// =05= Start Our Best Section
+
+.our_best {
+  background-color: $grayColor;
+  //ٍ Start block
+  .block {
+    background-color: #fff;
+    display: inline-block;
+    padding: 30px 20px;
+    text-align: center;
+    @extend %transition;
+
+    .icon {
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: #f00;
+      border-radius: 100%;
+      margin: 0 auto;
+      background-color: $mainColor;
+      @extend %transition;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 25px 0 15px;
+    }
+
+    .paragraph_global {
+      @extend %transition;
+    }
+
+    &:hover {
+      background-color: $mainColor;
+      color: #fff;
+      box-shadow: 0 0 40px 0 rgba(153, 168, 179, 0.39);
+
+      .paragraph_global {
+        color: #fff;
+      }
+
+      .icon {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.icon_color {
+  display: none;
+}
+// =05= End Our Best Section
+// =06= Start Testmonial Section
+
+.testmonial {
+  .home_page-title {
+    color: $mainColor;
+    margin-bottom: 40px;
+
+    &:before {
+      background-color: $mainColor;
+    }
+  }
+
+  .testmonial_slider {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 70px rgba(0, 7, 58, 0.15);
+    max-width: 900px;
+    margin: 0 auto;
+    @media (min-width:$md) {}
+  }
+
+  .testmonial_block {
+    i {
+      font-size: 30px;
+      color: #00073A;
+
+      &[class*="fa-quote-left"] {
+        float: left;
+      }
+    }
+
+    p {
+      padding: 15px;
+      line-height: 30px;
+    }
+  }
+}
+// =06= End Testmonial Section

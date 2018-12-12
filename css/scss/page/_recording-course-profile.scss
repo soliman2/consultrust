@@ -1,0 +1,218 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss";
+@import "componants/slider-custum.scss";
+/*****/
+.recording_course {
+  .recording_course-head {
+    height: 100vh;
+    @media (max-width:$lg) {
+      height: 500px;
+    }
+    @media (max-width:$sm)and (min-width:$md) {
+      height: 600px;
+    }
+  }
+
+  .recording_course-content {
+    position: relative;
+    z-index: 9;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    @media(max-width: $lg) {
+      flex-wrap: wrap-reverse;
+    }
+    padding-top: 150px;
+
+    .coach_video {
+      @media(max-width: $lg) {
+        margin: 30px 0;
+      }
+    }
+
+    .course_data {
+      .course_data-title {
+        span {
+          font-size: 30px;
+          @media(max-width: $lg) {
+            font-size: 18px;
+          }
+        }
+
+        h1 {
+          font-size: 36px;
+          margin: 20px 0;
+          @media(max-width: $lg) {
+            font-size: 22px;
+          }
+        }
+      }
+
+      .course_details {
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            margin: 16px;
+            @media(max-width: $lg) {
+              font-size: 14px;
+            }
+
+            span {
+              font-size: 20px;
+              @media(max-width: $lg) {
+                font-size: 18px;
+              }
+            }
+
+            p {
+              text-indent: 20px;
+              font-size: 16px;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .course_buttons {
+        display: flex;
+        @media (min-width:$lg) {
+          margin-top: 30px;
+        }
+
+        .button {
+          background-color: $redColor;
+
+          &:hover {
+            background-color: #fff;
+            color: $mainColor;
+          }
+        }
+
+        .favorite_buttons {
+          display: flex;
+
+          li {
+            margin: 0 16px;
+          }
+        }
+      }
+    }
+  }
+}
+/*Start Course Details */
+.recording_course {
+  .course_coast-details {
+    margin: 30px 0;
+  }
+}
+/*End Course Details*/
+// Start Course Video Liste
+
+.course_video-list {
+  background-color: #EEE;
+  padding: 40px 0;
+}
+
+.video_list-Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin: 0;
+  }
+  //Toggle Status icon
+  .video_status-icon {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      display: block;
+      font-family: 'Font Awesome\ 5 Free';
+      font-weight: 900;
+    }
+  }
+
+  &.open_video {
+    .video_status-icon {
+      &:before {
+        content: "\f03d";
+        color: $secondColor;
+      }
+    }
+  }
+
+  &.close_video {
+    .video_status-icon {
+      &:before {
+        content: "\f023";
+        color: $redColor;
+      }
+    }
+    // Change Button Style
+    .button_content {
+      button {
+        background: rgba(165, 174, 181, 0.5);
+        cursor: no-drop;
+      }
+    }
+  }
+
+  .video_content {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 15px 30px;
+    @media(max-width:$lg) {
+      width: 100%;
+    }
+    @media(min-width:$lg) {
+      width: 70%;
+    }
+
+    .video_title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      .description_toggle-js {
+        font-size: 18px;
+        color: $darkColor;
+        cursor: pointer;
+      }
+
+      .video_description {
+        padding: 0 15px;
+
+        h3 {
+          color: $mainColor;
+          font-size: 20px;
+        }
+
+        .paragraph_global {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .button_content {
+    @media(max-width:$lg) {
+      width: 100%;
+      margin-top: 15px;
+    }
+    margin: 0 30px;
+  }
+}
+// End Course Video Liste

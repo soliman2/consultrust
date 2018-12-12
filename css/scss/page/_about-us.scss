@@ -1,0 +1,108 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss";
+
+/**/
+/*Start Blog Page*/
+// Satrt About Us
+.about_us {
+
+  section {
+    margin: 50px 0;
+    position: relative;
+
+    &:before {
+      @media (min-width: $lg) {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 90%;
+        width: 2px;
+        background-color: $grayColor;
+        top: 15%;
+      }
+    }
+  }
+
+  .title {
+    font-size: 36px;
+    color: $redColor;
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    margin-right: 0;
+
+    &::before {
+      top: 10px;
+      left: -60px;
+      right: auto;
+      position: absolute;
+      display: block;
+      content: "";
+      height: 30px;
+      width: 30px;
+      border-radius: 100%;
+      background: $grayColor;
+
+      @media(max-width: $md) {
+        font-size: 22px;
+      }
+
+    }
+  }
+
+  .sub_title {
+    font-size: 24px;
+    line-height: 35px;
+    color: $secondColor;
+
+    @media(max-width: $md) {
+      font-size: 18px;
+    }
+  }
+
+  .about_us-text {
+    color: $darkColor;
+    font-size: 18px;
+    line-height: 36px;
+
+    @media(max-width: $md) {
+      font-size: 14px;
+    }
+
+  }
+
+  .about_us-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    @media (max-width: $md) {
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    p {
+      @media (min-width: $lg) {
+        max-width: 70%;
+      }
+    }
+  }
+
+  p {
+    @media (min-width: $lg) {
+      padding: 0 30px;
+    }
+
+  }
+
+  img {
+    @media (min-width: $lg) {
+      max-width: 30%;
+    }
+  }
+}
+
+// End About Us

@@ -1,0 +1,110 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss";
+
+/**/
+/*ٍStart Question Page*/
+.question {
+
+  // Start Title
+  .question_title-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    img {
+      max-height: 90px;
+
+      @media (max-width: $md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h2 {
+      color: $darkColor;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 0 30px;
+
+      span {
+        color: $secondColor;
+      }
+    }
+  }
+
+  // Start Question Tabs
+  .question_tab {
+    .tab_list {
+      li {
+        color: $darkColor;
+        font-size: 18px;
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+        cursor: pointer;
+
+        &.active {
+          color: $redColor;
+          font-size: 20px;
+        }
+      }
+
+    }
+  }
+
+  // Start All Tabs
+  .all_tabs {
+    &>div:not(:first-child) {
+      display: none;
+    }
+
+    .question_details {
+      ul {
+        li {
+          padding: 15px;
+          margin: 2px 0;
+          @extend %transition;
+          background-color: rgba(241, 241, 241, 0.4);
+
+          span {
+            color: $secondColor;
+            font-size: 22px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+              color: $redColor;
+            }
+          }
+
+          p {
+            display: none;
+
+          }
+
+          // Add Class Active
+          &.open {
+            border: 1px solid $mainColor;
+            background: #fff;
+
+            span {
+              color: $redColor;
+            }
+
+            p {
+              display: block;
+              margin: 16px 0;
+              font-size: 18px;
+              color: $darkColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // End All Tabs
+}

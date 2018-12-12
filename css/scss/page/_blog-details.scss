@@ -1,0 +1,191 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss"; /**/
+/*Start Blog Page*/
+
+.blog-details-head {
+  padding: 40px 0;
+}
+
+.wrticls_writer-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  .profile_coach-details {
+    margin: 0 20px;
+  }
+
+  .flowers_list {
+    margin-top: 30px;
+
+    li {
+      margin: 0 20px;
+    }
+  }
+}
+
+.blog_details-coatch-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.blog_details-img {
+  display: inline-block;
+  float: right;
+  /*Change*/
+  height: 350px;
+  width: 500px;
+  margin: 0 16px;
+  display: flex;
+  justify-content: flex-start;
+  @media (max-width:$lg) {
+    width: 100%;
+    margin: 0;
+  }
+
+  .favorite_buttons {
+    margin: 16px;
+    max-width: 150px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+// Start Blog Details Ending
+
+.blog_details-ending {}
+
+.blog_details-comments {
+  .form_comments {
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 8px;
+      color: $darkColor;
+      display: block;
+      border: 1px solid $grayColor;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+  }
+}
+// End Blog Details Ending
+// Start evaluation_coach
+
+.evaluation_coach {
+  margin: 30px 0;
+
+  .row {
+    background-color: #F9F9F9;
+    padding: 20px;
+    margin: 1px 0;
+  }
+
+  .avatar {
+    background: #fff;
+  }
+
+  h2 {
+    font-size: 16px;
+    color: $secondColor;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 30px;
+  }
+}
+// End evaluation_coach
+// Start Blog Most Read
+
+.articls-most_read {
+  .articls_content {
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    .articl_description {
+      margin: 0 8px;
+    }
+
+    .articls_img {
+      height: 120px;
+      width: 120px;
+    }
+
+    .articls_content-title {
+      font-size: 14px;
+    }
+  }
+}
+
+.articls_writer-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  .blog_details-coatch-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .favorite_buttons {
+    display: flex;
+    justify-content: center;
+
+    li {
+      height: 30px;
+      margin: 0 4px;
+      width: 30px;
+      line-height: 30px;
+
+      i {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.coach_name-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4px;
+
+  .coach_name {
+    margin: 0 4px;
+  }
+
+  h3 {
+    font-size: 12px;
+    color: $darkColor;
+    margin: 0;
+  }
+}
+// End Blog Most Read
+
+.related_articls {
+  .articls_img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .articls_content {
+    @media (max-width: $lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .articl_description {
+    padding: 16px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  }
+
+  .articls_content-title {
+    font-size: 14px;
+  }
+}

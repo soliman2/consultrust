@@ -1,0 +1,85 @@
+// Start Wallt
+div(id="wallt" class="container") 
+
+    //Start Section of current balance
+    section(class="current_balance")
+        h3(class="all_tabs-title") الرصيد الحالي
+        aside(class="current_balance-cicle")
+            span(id="balance") 1445.25
+            p(class="currency") جنية مصرى
+        
+        // Strat Wallt Buttons
+        aside(class="wallt_buttons")
+            button(class="button next-js") اعاده شحن الرصيد
+        // End Wallt Buttons
+    //End Section of current balance
+
+
+    //Start Section of current balance
+    section(class="charge_balance")
+        h3(class="all_tabs-title") ادخل القيمه المراد شحنها
+        form(action="" class="charge_balance-form")
+            input(type="number")
+            span جنية مصرى
+        
+        // Strat Wallt Buttons
+        aside(class="wallt_buttons")
+            button(class="button next-js") متابعة
+            button(class="button prev-js") رجوع
+        // End Wallt Buttons
+    //End Section of current balance
+    
+    
+    //Start Section of payment_way
+    section(class="payment_way")
+      //-Start Progress par
+      ul(class="walt_progress")
+        li
+          span الطلب 
+            
+        li(class="selected_point")
+          span اختيار وسيلة الدفع
+                
+        li
+          span الدفع
+      
+      //-End Progress par
+      
+      //Start Chose Pay Way
+      div(class="chose_payment-content")
+      
+        //-Start Block
+        a( href="#" class="payment_block")
+          img(src="img/master_card.png")
+          span Mohamed-ahmed@consultrust.com  
+        //-End Block
+        
+        //-Start Block
+        a( href="#" class="payment_block")
+          img(src="img/visa.png")
+          span Mohamed-ahmed@consultrust.com  
+        //-End Block
+        
+        //-Start Block
+        a( href="#" class="payment_block")
+          h3 المحفظة
+          span الرصيد الحالى 2548 جنية 
+        //-End Block
+        
+        //-Start Block
+        a( href="#" class="payment_block add_new")
+          i(class="fas fa-plus")
+          span اضف وسيله دفع جديده 
+        //-End Block
+        
+        
+      //End Chose Pay Way
+      
+        
+      // Strat Wallt Buttons
+      aside(class="wallt_buttons")
+          button(class="button ") دفع
+          button(class="button prev-js") رجوع
+      // End Wallt Buttons
+    //End Section of current balance
+// End Wallt

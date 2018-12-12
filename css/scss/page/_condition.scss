@@ -1,0 +1,24 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss"; /**/
+/*ٍStartCondition Page Page*/
+.condition{
+  .date{
+    font-size: 16px;
+    color: $redColor;
+  }
+  section{
+    margin: 30px;
+  }
+  .condition_title{
+    color: $secondColor;
+    font-size: 26px;
+    margin-bottom: 20px;
+
+  }
+  p{
+    line-height: 36px;
+    font-size: 18px;
+    color: $darkColor;
+    margin: 16px 0;
+  }
+}

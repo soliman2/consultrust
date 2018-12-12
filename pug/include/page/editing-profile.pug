@@ -1,0 +1,99 @@
+// Satrt My Aaccount Pages
+.container
+  form  
+    .row
+      //-Start add image 
+      div(class="col-sm-12 col-lg-4")
+        .add_image
+          aside(class="profile_image")
+            img(class="" src="img/icon/avatar.png")
+          lable(class="button" id="upload_imag" type="file") 
+            i(class="fas fa-upload") 
+            span ارفع الصورة
+            input(type="file" id="File" )
+
+      //-End add image 
+
+      //-Start Profile Form
+  
+      div(class="col-sm-12 col-lg-8")
+        .profile_form 
+          h2(class="form_title") تعديل البيانات
+          div(class="glopal_form row" get="post")
+            //-Start input
+            div(class="col-sm-12 col-lg-6")
+                label(for="") الاسم الأول 
+                input(type="text" placholder="" value="")
+            //-End input  
+
+            //-Start input
+            div(class="col-sm-12 col-lg-6")
+                label(for="")  الإسم الثانى
+                input(type="text" placholder="" value="")
+            //-End input   
+
+            //-Start input
+            div(class="col-sm-12 col-lg-6")
+                label(for="") البريد الإلكترونى
+                input(type="text" placholder="" value="")
+            //-End input  
+
+            //-Start input
+            div(class="col-sm-12 col-lg-6")
+                label(for="") اسم المستخدم
+                input(type="text" placholder="اسم المستخدم" value="")
+            //-End input   
+
+            //-Start input
+            div(class="col-sm-12 col-lg-4")
+                label(for="") رقم الهاتف
+                input(type="text" placholder="" value="")
+            //-End input 
+
+            //-Start input
+            div(class="col-sm-12 col-lg-4")
+              label(for="") النوع 
+              .select_content-area
+                .select_type-content
+                  input(type="radio" name="select" value="Woman") 
+                  span أنثى  
+                  
+                .select_type-content
+                  input(type="radio" name="select" value="Man") 
+                  span ذكر 
+            //-End input 
+
+            //-Start input
+            div(class="col-sm-12 col-lg-4")
+                    aside(class="slect_Your-twon") 
+                      label البلد
+                      .custum_select
+                        select
+                          option(value="") اختر دولتك
+                          option(value="") مصر
+                          option(value="") اليمن 
+                          option(value="")  قطر
+            //-End input 
+            //-Start input
+            div(class="col-sm-12 ")
+              h3(class="sub_title") تغيير كلمة السر
+
+            //-End input  
+
+            //-Start input
+            div(class="col-sm-12 col-lg-6")
+                label(for="") كلمة السر القديمة 
+                input(type="password" placholder="اسم المستخدم" value="")
+            //-End input   
+
+            //-Start input
+            div(class="col-sm-12 col-lg-6")
+                label(for="") كلمة السر الجديدة
+                input(type="password" placholder="" value="")
+            //-End input 
+
+            button(class="button" type="submit") حفظ 
+
+
+      //-End Profile Form
+// End My Aaccount Pages

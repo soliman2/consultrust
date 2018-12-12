@@ -1,0 +1,714 @@
+@import "helpers/variables.scss";
+/**Start Navbar**/
+
+.navbar {
+    height: 100px;
+    padding: 0;
+    background-image: linear-gradient(to left, rgba(43, 58, 145, 0.4), rgba(0, 147, 255, 0.4));
+
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.fixed {
+        background-color: #fff;
+        position: fixed;
+        top: -8px;
+        box-shadow: 0 5px 20px 0 rgba(4, 78, 128, 0.3);
+        background-image: linear-gradient(to left, #fff, #fff);
+
+        .navbar_content {}
+
+        .notification_button {
+            @media (min-width: $lg) {
+                color: $mainColor;
+            }
+
+        }
+
+        .languge_button {
+            margin: 14px 0;
+        }
+
+        .navbar_menu {
+            .navbar_menu-lest {
+                &>li {
+                    &:hover {
+                        &:before {
+
+                            /*Menu For Descktop*/
+                            @media (min-width: $lg) {
+                                background-color: $secondColor;
+                            }
+                        }
+
+                        &:after {
+
+                            /*Menu For Descktop*/
+                            @media (min-width: $lg) {
+                                border-bottom: 5px solid $secondColor;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            @media (min-width: $lg) {
+                                color: $secondColor;
+                            }
+
+                            /*Menu For Descktop*/
+                            @media (max-width: $lg) {
+                                color: #fff;
+                            }
+                        }
+
+                        &:before {
+
+                            /*Menu For Descktop*/
+                            @media (min-width: $lg) {
+                                background-color: $secondColor;
+                            }
+                        }
+
+                        &:after {
+
+                            /*Menu For Descktop*/
+                            @media (min-width: $lg) {
+                                border-bottom: 5px solid $secondColor;
+                            }
+                        }
+                    }
+
+                    &>a {
+                        @media (min-width: $lg) {
+                            color: $mainColor;
+
+                            &:hover {
+                                color: $secondColor;
+                            }
+                        }
+
+                        /**For Mobile**/
+                        @media (max-width: $lg) {
+                            color: #fff;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+                        }
+                    }
+                }
+            }
+        }
+
+        .login_area-content {
+
+            .login_button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+
+                .avatar_img {
+                    border: 1px solid #ccc;
+                    display: inline-block;
+                }
+
+                span {
+
+                    @media (min-width: $lg) {
+                        color: $mainColor;
+                    }
+
+                    &:hover {
+                        color: $secondColor;
+                    }
+                }
+            }
+
+            .languge {
+                @media (min-width: $lg) {
+                    background-color: $mainColor;
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: $secondColor;
+                }
+            }
+        }
+
+        .brand_white {
+            display: none;
+        }
+
+        .brand_color {
+            display: block;
+        }
+    }
+
+    .brand_color {
+        display: none;
+    }
+
+    @media (min-width: $lg) {
+        // top: 80px;
+    }
+
+    margin-top: 0;
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.navbar_content {
+    // background-color: #fff;
+    // line-height: 60px;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    @media (min-width: $lg) {
+        width: 100%;
+    }
+}
+
+.navbar_brand {
+    height: 55px;
+    width: 213px;
+    display: inline-block;
+
+    img {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.navbar_overlay {
+    display: block;
+
+    @media (max-width: $lg) {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.52);
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+}
+
+.navbar_menu {
+    /*Menu For Descktop*/
+    padding: 0;
+    margin: 0;
+
+    .navbar_menu-lest {
+        @media (min-width: $lg) {
+            width: 600px;
+        }
+    }
+
+    @media (min-width: $lg) {
+        // width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*Menu For Mobile*/
+    @media (max-width: $lg) {
+        overflow-y: auto;
+        width: 260px;
+        height: 100vh;
+        position: fixed;
+        z-index: 9999;
+        left: -260px;
+        right: auto;
+        /*Change*/
+        top: 0;
+        background-color: $mainColor;
+        display: block;
+    }
+
+    .navbar_menu-lest>li {
+        position: relative;
+
+        &:before {
+            @extend %transition;
+        }
+
+        &:hover {
+            &:before {
+
+                /*Menu For Descktop*/
+                @media (min-width: $lg) {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    background-color: #fff;
+                    width: 100%;
+                    height: 4px;
+                    bottom: -38px;
+                }
+            }
+
+            &:after {
+
+                /*Menu For Descktop*/
+                @media (min-width: $lg) {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    bottom: -34px;
+                    right: 40%;
+                    left: 40%;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid #fff;
+                    text-align: center;
+                }
+            }
+        }
+
+        &.active {
+            a {
+                color: #fff;
+
+                /*Menu For Descktop*/
+                @media (min-width: $lg) {
+                    color: $secondColor;
+                }
+            }
+
+            &:before {
+
+                /*Menu For Descktop*/
+                @media (min-width: $lg) {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    background-color: #fff;
+                    width: 100%;
+                    height: 4px;
+                    bottom: -38px;
+                }
+            }
+
+            &:after {
+
+                /*Menu For Descktop*/
+                @media (min-width: $lg) {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    bottom: -34px;
+                    right: 40%;
+                    left: 40%;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid #fff;
+                    text-align: center;
+                }
+            }
+        }
+
+        /**For Descktop*/
+        @media (min-width: $lg) {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /**For Mobile*/
+        @media (max-width: $lg) {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            padding-right: 10px;
+            /*Change*/
+        }
+
+        a {
+            font-size: 16px;
+            color: #fff;
+            @extend %transition;
+            padding: 0 10px;
+
+            /**For Descktop**/
+            @media (min-width: $lg) {
+                &:hover {
+                    color: $secondColor;
+                }
+            }
+
+            /**For Mobile**/
+            @media (max-width: $lg) {
+                color: #fff;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+                display: block;
+                line-height: 45px;
+            }
+
+            i {
+                @media (max-width: $lg) {
+                    position: absolute;
+                    left: 200px;
+                    /*Change*/
+                    top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/**End Dropdown link**/
+
+/***Start navbar_dropdown**/
+
+.navbar_dropdown-menu {
+    /*Dropdown Menu For Descktop*/
+    display: none;
+
+    @media (min-width: $lg) {
+        line-height: 24px;
+        position: absolute;
+        top: 58px;
+        z-index: 99;
+        background: #fff;
+        box-shadow: 0 0 3px rgba(18, 68, 98, 0.2);
+        padding: 0;
+        width: 200px;
+        left: -47px;
+    }
+
+    /*Dropdown Menu For Mobile*/
+    @media (max-width:$lg) {
+        padding: 0;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    &>li {
+
+        /*Dropdown Menu =Li=  For Mobile*/
+        @media (min-width: $lg) {
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 5px 0;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        &:hover {
+            background-color: $mainColor;
+
+            a {
+                color: #fff;
+            }
+        }
+
+        a {
+            font-size: 14px;
+            padding-left: 10px;
+            margin-bottom: 6px;
+            display: block;
+            color: $mainColor;
+        }
+    }
+}
+
+// .dropdown_link-inside .navbar_dropdown-menu {
+//   top: 0;
+//   left: 100%;
+//   /*Change*/
+// }
+.navbar_dropdown-menu {
+    display: none;
+
+    i {
+        @media (min-width: $lg) {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.dropdown_link-inside i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.dropdown_link {
+    color: #fff;
+
+    i {
+        padding-left: 8px;
+    }
+}
+
+/***End navbar_dropdown**/
+
+/****Button***/
+
+.navbar_button {
+    line-height: 100px;
+    font-size: 22px;
+    display: none;
+    cursor: pointer;
+    color: $mainColor;
+    @extend %transition;
+
+    &:hover {
+        color: $secondColor;
+    }
+
+    @media (max-width: $lg) {
+        display: block;
+    }
+
+    i {
+        background-color: #fff;
+        font-size: 30px;
+        padding: 15px;
+        box-shadow: 0 0 1px #124462;
+        border-radius: 10px;
+        @extend %transition;
+
+        &:hover {
+            box-shadow: 0 0 8px #124462;
+        }
+    }
+}
+
+/**End Navbar**/
+
+// login_area-content
+.login_area-content {
+    @media (min-width: $lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .creat_account {
+        height: 40px;
+        width: 160px;
+        text-align: center;
+        line-height: 40px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        font-size: 16px;
+        padding: 0 20px;
+
+        @media (max-width: $lg) {
+            margin: 20px 0;
+        }
+    }
+
+    .login_button {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin: 0 10px;
+
+        @media (min-width: $lg) {
+            margin-right: 50px;
+        }
+
+        margin-left: 0;
+
+
+        .avatar_img {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 50px;
+            background-color: #fff;
+            padding: 5px;
+
+            i {
+                font-size: 35px;
+                color: #ccc;
+                display: block;
+            }
+        }
+
+        span {
+            color: #fff;
+            margin: 0 5px;
+
+            @media (max-width: $lg) {
+                color: #fff;
+            }
+
+            &:hover {
+                color: $secondColor;
+            }
+        }
+    }
+
+    .languge {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 5px;
+        font-size: 20px;
+        @extend %transition;
+
+        @media (max-width: $lg) {
+            display: block;
+            background-color: #fff;
+            margin: 15px;
+        }
+
+        &:hover {
+            background-color: $secondColor;
+            color: #fff;
+        }
+    }
+}
+
+// Start Notification Area
+.notification_area {
+    position: relative;
+
+    .notification_button {
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+
+        &.new_notification {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: "";
+                height: 8px;
+                width: 8px;
+                border-radius: 100%;
+                background-color: $redColor;
+            }
+        }
+
+        @media (min-width:$lg) {
+            margin-right: 50px;
+        }
+
+        @media (max-width:$lg) {
+            margin: 10px;
+        }
+    }
+
+    .notification_area-list {
+        display: none;
+        background-color: #fff; // Start List Title
+
+        li.title {
+            background: #EEEEEE;
+            padding: 20px;
+            width: 100%;
+            display: inline-block;
+
+            text-align: center; // TitleFor Desck Top
+
+            @media (min-width: $lg) {
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                overflow-y: auto;
+            }
+
+            // Title For Mobill
+            @media (max-width:$lg) {}
+
+
+            span {
+                color: $mainColor;
+            }
+        }
+
+        // End List Title
+        // List Area For Desck Top
+        @media (min-width:$lg) {
+            width: 300px;
+            position: absolute;
+            right: 40%;
+            left: auto;
+            /*Change*/
+            border-radius: 25px;
+            box-shadow: 0 3px 90px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+        // List Area For Mobill
+        @media (max-width:$lg) {}
+
+        // Start All List inside List Area
+        li {
+            border-top: 1px solid #EEEEEE;
+            padding: 16px;
+
+            .notification-date {
+                color: #9195AA;
+                font-size: 12px;
+            }
+
+            a {
+                position: relative;
+                display: block;
+                padding: 0 14px;
+                font-size: 14px;
+                line-height: 26px;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 100%;
+                    background: #EEEEEE;
+                    top: 10px;
+                    right: -10px;
+                    /*Change*/
+                }
+
+
+
+            }
+
+            // New Notification 
+            &.active {
+                a {
+                    &:before {
+                        background: $redColor;
+                    }
+                }
+
+            }
+
+        }
+
+        // Start All List inside List Area
+    }
+}
+
+// End Notification Area

@@ -1,0 +1,33 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss";
+/*Start Sitemap*/
+.sitemap{
+    .home_page-title{
+        color: $redColor;
+        &:before{
+            background: $redColor;
+        }
+    }
+    .siteman_block{
+        margin: 20px 0;
+    }
+    .siteman_block-title{
+        color: $darkColor;
+        font-size: 22px;
+    }
+    .siteman_block-list{
+        li{
+            padding: 8px 0;
+
+            a{
+color: $mainColor;
+@extend %transition;
+&:hover{
+    color: $secondColor;
+}
+            }
+        }
+    }
+}
+
+/*End Sitemap*/

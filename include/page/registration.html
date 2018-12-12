@@ -1,0 +1,203 @@
+
+<!--=01=Start Popup Creat Account-->
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="creat_account">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button class="close fas fa-times" type="button" data-dismiss="modal"> </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h2 class="title">اهلا بك معنا</h2><span class="sub_title">يمكنك تسجيل الدخول بكل سهوله</span>
+          <!-- Start List icon Registration-->
+          <ul class="list-unstyled list_registration-with">
+            <li><a href="#"> <i class="fab fa-google"></i><span>
+                  <bdi>Google انشاء حساب بواسطه  </bdi></span></a></li>
+            <li><a href="#"> <i class="fab fa-twitter"></i><span>
+                  <bdi>Twitter انشاء حساب بواسطه </bdi></span></a></li>
+            <li><a href="#"> <i class="fab fa-facebook-f"></i><span>
+                  <bdi>Facebook انشاء حساب بواسطه </bdi></span></a></li>
+            <li><a href="#" data-toggle="modal" data-target="#sign_up" data-dismiss="modal"> <i class="far fa-envelope"></i><span>
+                  <bdi>E-mail انشاء حساب بواسطه </bdi></span></a></li>
+          </ul>
+          <!-- End List icon Registration -->
+          <p class="have_account paragraph_link">لديك حساب بالفعل؟<a href="#" data-toggle="modal" data-target="#sign_in" data-dismiss="modal">سجل الان</a></p>
+          <p class="accept_rols paragraph_link">بقيامك بالتسجيل فانت توافق على <a href="#"> الشروط والأحكام     </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=01=End Popup Creat Account-->
+<!--=02=Start Popup Sign Up -->
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="sign_up">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button class="close fas fa-times" type="button" data-dismiss="modal"> </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h2 class="title">انشاء حساب</h2>
+          <!-- Start Form content-->
+          <form class="glopal_form " action="index.html" method="post">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>الاسم الاول </label>
+                <input value=""/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>الاسم الاخير </label>
+                <input value=""/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>البريد الالكتروني </label>
+                <input value=""/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>اسم المستخدم </label>
+                <input value=""/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>رقم الهاتف </label>
+                <input value=""/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="select_content-area">
+                  <aside class="select_your-tupe">
+                    <label>النوع </label>
+                    <aside>
+                      <div class="select_type-content">
+                        <input type="radio" name="select" value="Woman"/><span>أنثى  </span>
+                      </div>
+                      <div class="select_type-content">
+                        <input type="radio" name="select" value="Man"/><span>ذكر </span>
+                      </div>
+                    </aside>
+                  </aside>
+                  <aside class="slect_Your-twon"> 
+                    <label>البلد</label>
+                    <div class="custum_select">
+                      <select>
+                        <option value="">اختر دولتك</option>
+                        <option value="">مصر</option>
+                        <option value="">اليمن </option>
+                        <option value=""> قطر</option>
+                      </select>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>كلمه السر </label>
+                <input value="" type="password"/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <label>تأكيد كلمه السر </label>
+                <input value="" type="password"/>
+              </div>
+            </div>
+            <!-- End List icon Registration -->
+            <aside class="sign_button-content">
+              <button class="button" type="submit">تسجيل   </button>
+            </aside>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer"><span data-dismiss="modal" data-toggle="modal" data-target="#creat_account">رجوع</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=02=End Popup Sign Up -->
+<!--=03=Start Popup Sign In -->
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="sign_in">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button class="close fas fa-times" type="button" data-dismiss="modal"> </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h2 class="title">تسجيل الدخول</h2>
+          <!-- Start Form content-->
+          <form class="glopal_form middel_form " action="index.html" method="post">
+            <div class="row">
+              <div class="col-sm-12 ">
+                <label>اسم المستخدم او البريد الالكتروني </label>
+                <input value="" type="text"/>
+              </div>
+              <div class="col-sm-12 ">
+                <label>كلمه السر </label>
+                <input value="" type="password"/>
+              </div>
+            </div>
+            <p> <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#forget_password"> نسيت كلمه السر؟  </a></p>
+            <!-- End List icon Registration -->
+            <aside class="sign_button-content">
+              <button class="button" type="submit">تسجيل   </button>
+            </aside>
+          </form>
+          <!--Statr Registration with Social media-->
+          <aside class="sign_with-social">
+            <p class=" paragraph_link"> لا تملك حساب بعد؟<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign_up">انشأ حساب؟</a></p>
+            <h2>او سجل بواسطه</h2>
+            <!-- Start List icon Registration-->
+            <ul class="list_inline list_registration-with">
+              <li><a href="#"> <span>Google </span><i class="fab fa-google"></i></a></li>
+              <li><a href="#"> <span>Twitter </span><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"> <span>Facebook </span><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <!-- End List icon Registration -->
+          </aside>
+          <!--End Registration with Social media  -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=03=End Popup Sign In -->
+<!--=04=Start Forget password -->
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="forget_password">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button class="close fas fa-times" type="button" data-dismiss="modal"> </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h2 class="title">استرجاع كلمه السر</h2>
+          <!-- Start Form content-->
+          <form class="glopal_form middel_form " action="index.html" method="post">
+            <div class="row">
+              <div class="col-sm-12 ">
+                <label>ادخل البريد الالكترونى الخاص بك </label>
+                <input value="" type="text"/>
+              </div>
+            </div>
+            <!-- End List icon Registration -->
+            <aside class="sign_button-content">
+              <button class="button" type="submit">ارسال</button>
+            </aside>
+          </form>
+          <!--End Registration with Social media  -->
+          <!-- Modal footer -->
+          <div class="modal-footer"><span data-dismiss="modal" data-toggle="modal" data-target="#sign_in">رجوع</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=04=End Forget password -->

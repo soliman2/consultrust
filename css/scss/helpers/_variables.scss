@@ -1,0 +1,417 @@
+$mainColor: #0093FF;
+$secondColor: #1EDDEC;
+$grayColor: #F1F1F1;
+$redColor: #FB647D;
+$darkColor: #2C378E;
+$blueColor: #2C378E;
+$pColor: #40446A;
+$gradiantColor: linear-gradient(to left, #2C378E, #0093FF);
+$borderRadius: 30px;
+$boxShadow: 0 3px 6px #124462;
+$overlay: rgba(4, 78, 128, 0.45);
+$lineHeight: 26px; /*Media Query*/
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px; /*Box Shadow*/
+// Social Variable color
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$linkedin: #00a0dc;
+$google: #ea4335;
+$istagram: #e1306c;
+$whats: #25d366; /***Container Widt***/
+
+.container {
+  @media (min-width: $lg) {
+    max-width: 1170px;
+  }
+}
+/*Glopal Style*/
+
+img {
+  // display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+[data-src] {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+/********Glopal Class******/
+
+.home_page-title {
+  color: $mainColor;
+  font-size: 24px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 30px;
+    width: 5px;
+    border-radius: 150px;
+    background-color: $mainColor;
+    top: 0;
+    left: 0;
+    /*Change*/
+  }
+}
+
+.button_load-mpre {
+  margin-top: 30px;
+}
+
+.paragraph_global {
+  color: #333333;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.home_page-section {
+  padding: 50px 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_inline {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+%transition {
+  transition: all ease-in-out 0.3s;
+}
+
+%overlay {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+%pseudo {
+  position: absolute;
+  display: block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+}
+/*Start Custume Select Button*/
+
+.custum_select {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: "\f0dd";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 22px;
+    top: -2px;
+    z-index: 1;
+    color: #40446A;
+    right: 20px;
+    left: auto;
+    /*Change*/
+  }
+
+  select {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 14px;
+    z-index: 3;
+    position: relative;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+}
+/*Start Custume Select Button*/
+/*Start Glopal Form*/
+
+.glopal_form {
+  padding: 15px;
+  @media (max-width: $sm) {
+    margin-top: 30px;
+  }
+
+  select {
+    width: 100%;
+    color: $mainColor;
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+    font-size: 16px;
+    color: $darkColor;
+    margin-bottom: 15px;
+  }
+
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none !important;
+    border-color: $secondColor;
+  }
+
+  input,
+  select,
+  textarea {
+    border: none;
+    border: 1px solid rgba(18, 68, 98, 0.23);
+    width: 100%;
+    border-radius: $borderRadius;
+    padding: 8px 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+
+  .select_content-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    .select_your-tupe {
+      width: 100%;
+
+      aside {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .select_type-content {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          align-content: center;
+          margin-bottom: 30px;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .slect_Your-twon {
+      width: 100%;
+    }
+  }
+
+  input[type='radio'] {
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  .button-blue {
+    border: none;
+    cursor: pointer;
+    padding: 10px 40px;
+  }
+  /*End Glopal Form*/
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    text-decoration: none;
+  }
+}
+/*Start Social Media Sharing*/
+
+.puplish_date {
+  color: $darkColor;
+  font-size: 12px;
+
+  i {
+    margin: 0 4px;
+    display: inline-block;
+  }
+}
+
+.social_sharing {
+  h3 {
+    margin-bottom: 20px;
+
+    i {
+      color: $darkColor;
+    }
+
+    span {
+      font-size: 23px;
+      color: $darkColor;
+    }
+  }
+
+  ul {
+    li {
+      a {
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 4px;
+        display: inline-block;
+        cursor: pointer;
+        @extend %transition;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &[class*=facebook] {
+          background-color: $facebook;
+        }
+
+        &[class*=twi] {
+          background-color: $twitter;
+        }
+
+        &[class*=google] {
+          background-color: $google;
+        }
+
+        &[class*=link] {
+          background-color: $linkedin;
+        }
+
+        &[class*=what] {
+          background-color: $whats;
+        }
+      }
+    }
+  }
+}
+//-Start Favorite and like Button
+
+.favorite_buttons {
+  li {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    @extend %transition;
+    cursor: pointer;
+
+    &.active {
+      i {
+        color: $redColor;
+      }
+    }
+
+    &:hover {
+      i {
+        color: $redColor;
+      }
+    }
+
+    i {
+      font-size: 22px;
+      color: $darkColor;
+    }
+  }
+}
+//End Vavorit and like Button
+/*Start Cources Head Title*/
+
+.course_head-title {
+  .home_page-title {
+    margin-bottom: 10px;
+  }
+
+  span {
+    margin: 0 20px;
+    color: $mainColor;
+  }
+}
+/*End Cources Head Title*/
+/*Start Profile Coach S=Glopal Style*/
+
+.flowers_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    @media (max-width:$md){
+      margin-bottom: 8px;
+    }
+    span {
+      display: inline-block;
+      margin: 0 8px;
+      color: $darkColor;
+    }
+
+    i {
+      font-size: 18px;
+      color: $mainColor;
+
+      &[class*="newspaper"] {
+        color: $darkColor;
+      }
+
+      &[class*="eye"] {
+        color: $secondColor;
+      }
+
+      &[class*="heart"] {
+        color: $redColor;
+      }
+    }
+  }
+}
+/*End Profile Coach S=Glopal Style*/
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}

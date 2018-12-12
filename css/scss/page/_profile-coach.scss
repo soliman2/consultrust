@@ -1,0 +1,619 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss";
+@import "componants/slider-custum.scss"; /**/
+@import "componants/custum-calender.scss"; /**/
+@import "componants/keyframs.scss"; /**Slider Img Size */
+/* Start Profile Coach*/
+.profile_coach {
+  padding: 40px 0;
+  /*Glopa For Custum Select*/
+  .custum_select {
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+
+    &:hover {
+      background: $mainColor;
+      color: #fff;
+
+      select {
+        color: #fff;
+      }
+
+      &:before {
+        color: #fff;
+      }
+    }
+
+    select {
+      border: 0;
+      padding: 8px;
+
+      &:focus {
+        outline: none;
+      }
+
+      option {
+        color: $mainColor;
+        padding: 6px;
+        width: 100%;
+      }
+    }
+  }
+}
+// Start Profile Coach details
+
+.profile_coach-info {
+  .profile_coach-img {
+    height: 250px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .profile_coach-details {
+    @media (max-width:$md) {
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: $mainColor;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 26px;
+      margin: 0;
+      color: $darkColor;
+    }
+
+    .rate {
+      margin: 14px 0;
+
+      li {
+        i {
+          color: #ffda44;
+        }
+
+        &.defult {
+          i {
+            color: #ddd;
+          }
+        }
+      }
+    }
+
+    .seation_coast {
+      h3 {
+        font-size: 16px;
+        color: $redColor;
+        margin-bottom: 15px;
+      }
+
+      .seation_coast-content {
+        display: flex;
+        justify-content: flex-start;
+
+        li {
+          padding: 8px 16px;
+          background: #2C378E;
+          border-radius: 3px;
+          color: #fff;
+
+          &:last-child {
+            background-color: $redColor;
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// Start Sub Profile Details
+
+.sub_profile-details {
+  margin: 35px 0;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  @media (max-width:$sm) {
+    justify-content: flex-start;
+  }
+
+  .social_network {
+    display: flex;
+
+    li {
+      min-width: 90px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+      margin: 0 8px;
+
+      i {
+        color: $mainColor;
+        font-size: 18px;
+      }
+
+      h6 {
+        font-size: 14px;
+        margin: 4px 0;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .coach_video {
+    text-align: center;
+    @media (max-width:$sm) {
+      margin-bottom: 40px;
+    }
+
+    .video {
+      &.animation {
+        animation: moveColor 1s linear infinite;
+      }
+    }
+
+    h4 {
+      margin-top: 20px;
+      font-size: 16px;
+      color: $secondColor;
+    }
+  }
+}
+// End Sub Profile Details
+// End Profile Coach Details
+// Start All Tabs "About Coach"
+
+.profile_coach-tabs {
+  .tabs {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #ddd;
+      bottom: -15px;
+    }
+
+    li {
+      cursor: pointer;
+      padding: 0 8px;
+      text-align: center;
+      font-size: 18px;
+
+      &.active {
+        color: $mainColor;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $mainColor;
+          bottom: -15px;
+        }
+      }
+    }
+  }
+
+  .all_tabs {
+    padding: 30px 0;
+
+    & > div:not(.about_coach) {
+      display: none;
+    }
+    // Glopal Style
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      color: $pColor;
+      font-size: 13px;
+      line-height: 26px;
+    }
+    // About Coatch
+    .about_coach {
+      margin-bottom: 20px;
+
+      .home_page-title {
+        color: $darkColor;
+        font-size: 18px;
+        margin-bottom: 15px;
+
+        &:before {
+          background-color: $darkColor;
+        }
+      }
+    }
+    // Articls Coach
+    .articls_details {
+      @extend %transition;
+
+      &:hover {
+        color: $darkColor;
+
+        p {
+          color: $darkColor;
+        }
+      }
+    }
+  }
+}
+// Evaluation Coach
+
+.evaluation_coach {
+  .evaluation_coach-content {
+    .avatar {
+      height: 80px;
+      width: 80px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 100%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+
+      i {
+        font-size: 50px;
+        display: block;
+        vertical-align: middle;
+      }
+    }
+
+    .evaluation_details {
+      h2 {
+        color: $darkColor;
+      }
+
+      span {
+        color: $pColor;
+        font-size: 14px;
+        display: inline-block;
+        margin: 8px 0;
+      }
+    }
+  }
+}
+// End All Tabs "About Coach"
+// Start Booking Coach Column
+//-Start Booking Coach Content
+
+.booking_coach-content {
+  // padding: 16px;
+  // box-shadow: 0 0 6px rgba(0,0,0,0.16);
+  // border-radius: 5px;
+  .booking_coach-tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      padding: 8px 30px;
+      background-color: $pColor;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      @media (max-width: $sm) {
+        padding: 8px 30px;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      &.active {
+        background-color: $mainColor;
+        position: relative;
+        text-align: center;
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: "";
+          bottom: -8px;
+          right: 45%;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid $mainColor;
+        }
+      }
+    }
+  }
+
+  .all_tabs {
+    padding: 30px 0;
+
+    & > div:not(.speacial_seation) {
+      display: none;
+    }
+    // Global Style
+    .home_page-title {
+      color: $redColor;
+      font-size: 18px;
+      margin-bottom: 14px;
+
+      &:before {
+        background-color: $redColor;
+      }
+    }
+
+    .block {
+      margin: 20px 0;
+    }
+
+    p {
+      color: $darkColor;
+      line-height: 26px;
+      font-size: 12px;
+    }
+    //speacial_seation
+    .speacial_seation {
+      .booking_seation-Content {
+        margin: 20px 0;
+        .row{
+          >div{
+            padding: 0 4px;
+          }
+        }
+      }
+
+      h3 {
+        color: $mainColor;
+        font-size: 16px;
+
+        span {
+          color: $darkColor;
+        }
+      }
+    }
+    // Start Programing Tabs Style
+    .program {
+      .program_show {
+        ul {
+          li {
+            color: $darkColor;
+            padding: 4px 0;
+            font-size: 13px;
+          }
+        }
+
+        .video_programe {
+          margin-top: 20px;
+        }
+      }
+
+      .program_details {
+        .program_table {
+          margin-top: 30px;
+
+          th {
+            font-size: 14px;
+            color: $pColor;
+          }
+
+          td {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+    // Start Training Tabs
+    .training {
+      .training_area {
+        margin-bottom: 30px;
+
+        .title_content {
+          display: flex;
+          justify-content: space-between;
+
+          .read_more {
+            padding: 6px 20px;
+            border-radius: 5px;
+            border: 1px solid $darkColor;
+
+            &:hover {
+              background: $mainColor;
+              color: #fff;
+              border: 1px solid $mainColor;
+            }
+          }
+        }
+
+        p {
+          margin-top: 10px;
+        }
+      }
+
+      p {}
+    }
+  }
+}
+// End Booking Coach Column
+/* End Profile Coach*/
+/*Used More Than Time in This Page*/
+.price_content {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  margin: 40px 0;
+
+  aside {
+    padding: 6px 25px;
+    background-color: $redColor;
+    border-radius: 5px;
+    margin: 0 16px;
+    color: #fff;
+  }
+
+  h2 {
+    color: $mainColor;
+    font-size: 18px;
+
+    &.home_page-title {
+      margin: 0;
+    }
+  }
+
+  span {
+    color: $darkColor;
+  }
+}
+
+.address {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+
+  h2 {
+    color: $mainColor;
+    font-size: 18px;
+  }
+
+  span {
+    color: $pColor;
+    margin: 0 8px;
+  }
+}
+//-Start Contact us Area
+
+.contatc_us-icons {
+  text-align: center;
+
+  p {
+    font-size: 16px!important;
+    color: $redColor !important;
+  }
+
+  ul {
+    li {
+      a {
+        font-size: 22px;
+        color: $darkColor;
+        padding: 0 4px;
+        cursor: pointer;
+        @extend %transition;
+
+        &[class*="whatsapp"] {
+          color: #25d366;
+        }
+
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+// Booking button
+
+.booking_button {
+  text-align: center;
+
+  .button {
+    font-size: 16px;
+    border: 0;
+    padding: 8px 80px;
+  }
+}
+
+
+//-Start Calender Contetn
+
+.calender_content {
+  .time {
+    text-align: center;
+    color: $darkColor;
+    margin: 16px 0;
+
+    span {
+      color: $mainColor;
+    }
+  }
+}
+/*Start Available Dates*/
+.available_dates-list {
+  margin: 20px 0;
+  display: none;
+
+  .available_dates-title {
+    color: $darkColor;
+    font-size: 22px;
+  }
+
+  ul {
+    .available_dates-content {
+      display: flex;
+      justify-content: space-between;
+
+      .available_dates-details {}
+
+      .available_dates-add {
+        input {
+          height: 16px;
+          width: 16px;
+          border: none;
+          cursor: pointer;
+          outline: $mainColor;
+        }
+
+        label {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+/*End Available Dates*/
+/*ٍStart Selected Dtate*/
+
+.menu_selected-dates {
+  margin: 20px 0;
+
+  .selected_dates-content {
+    display: flex;
+    justify-content: space-between;
+
+    aside {
+      &[id*="selected_dates-details-"] {
+        i {
+          color: $darkColor;
+        }
+
+        span {
+          font-size: 16px;
+          margin: 0 4px;
+          color: $darkColor;
+        }
+      }
+    }
+
+    .selected_dates-add {
+      color: $redColor;
+
+      .date_remove-js {
+        margin: 0 4px;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      label {}
+    }
+  }
+}
+//Start Hidden form
+
+.payment_form-js {
+  display: none;
+}
+/*End Selected Date*/

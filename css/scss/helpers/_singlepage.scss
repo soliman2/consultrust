@@ -1,0 +1,76 @@
+@import "helpers/variables.scss"; /**/
+/*Glopal Stye For All Single Page*/
+/*Head Style For All Pages*/
+
+.head_page {
+  height: 200px;
+  background-size: cover;
+
+  .container {
+    padding-top: 0;
+  }
+
+  .head_page-content {
+    padding-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    color: #fff;
+    flex-wrap: wrap;
+    position: relative;
+
+    .home_page-title {
+      font-size: 26px;
+      color: #fff;
+      margin: 0;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    .bread_crumb {
+      margin-top: 10px;
+      padding: 0 20px;
+      display: block;
+
+      li {
+        display: inline-block;
+        color: #fff;
+
+        a {
+          color: #fff;
+          position: relative;
+          margin-right: 20px;
+          margin-left: 0;
+          /*Change*/
+          &:hover {
+            color: $secondColor;
+
+            &:before {
+              color: $secondColor;
+            }
+          }
+
+          &:before {
+            position: absolute;
+            display: block;
+            content: "\f101";
+            /*Change*/
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            right: -18px;
+            left: auto;
+            /*Change*/
+          }
+        }
+      }
+    }
+  }
+}
+/*Single Page*/
+
+.single_page {
+  padding: 40px 0;
+}

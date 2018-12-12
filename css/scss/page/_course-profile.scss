@@ -1,0 +1,106 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss"; /**/
+/*Start Course Profile Page*/
+
+.course_profile {
+  .home_page-title {
+    color: $redColor;
+
+    &:before {
+      background-color: $redColor;
+    }
+  }
+}
+/*End Course Profile Page*/
+/*Start Head Course Coach description */
+.course_head {
+  background-color: rgba(238, 238, 238, 0.42);
+  padding: 30px 0;
+
+  .course_coach-description {
+    .course_head-content {
+      position: relative;
+
+      .favorite_buttons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*Change*/
+        li {
+          margin-bottom: 20px;
+        }
+      }
+
+      .button {
+        margin-top: 30px;
+      }
+      //Coach Profile
+      .profile_coach-info {
+        margin-top: 30px;
+      }
+    }
+  }
+  // Start Course Video
+  .course_video {
+    @media (max-width: $lg) {
+      margin-top: 30px;
+    }
+
+    iframe {
+      height: 420px;
+      width: 100%;
+    }
+  }
+}
+/*End Head Course Coach description*/
+/*Start Course Description*/
+.course_description {
+  padding: 30px 0;
+  // Cullumn one
+  .course_content {
+    .title {
+      font-size: 20px;
+      color: $darkColor;
+    }
+
+    p {
+      color: $pColor;
+    }
+  }
+  // Cullumn Two
+  .course_coast-details {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+
+    .consult_map {
+      margin: 20px 0;
+    }
+
+    .time_line {
+      .price_content {
+        .home_page-title {
+          text-indent: 10px;
+
+          &:before {
+            background-color: $grayColor;
+            border-radius: 100%;
+            border: 3px solid $redColor;
+            height: 20px;
+            width: 20px;
+            top: 3px;
+          }
+        }
+
+        span {}
+      }
+    }
+  }
+}
+/*End Course Description*/
+
+.related_courses {
+  background-color: rgba(238,238,238,0.50);
+}
+/*Start Related Courses */

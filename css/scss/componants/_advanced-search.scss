@@ -1,0 +1,198 @@
+@import "helpers/variables.scss";
+/*ٍStart provider search*/
+.provider_search {
+  .search_content {
+    margin-bottom: 10px;
+
+    & > div[class*="col"] {
+      @media (max-width:$lg) {
+        margin-top: 20px;
+      }
+    }
+
+    select {
+      width: 100%;
+      height: 50px;
+      cursor: pointer;
+      border: 0;
+      box-shadow: 1px 1px 20px rgba(0, 60, 134, 0.3);
+
+      &:focus {
+        outline: none!important;
+      }
+
+      option {}
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 0 14px;
+      width: 100%;
+      height: 50px;
+      border: 0;
+
+      &:focus {
+        outline: none!important;
+      }
+      box-shadow: 1px 1px 20px rgba(0, 60, 134, 0.3);
+    }
+
+    .search_button {
+      height: 50px;
+      width: 100px;
+      color: #fff;
+      background-color: $mainColor;
+      border: 0;
+      cursor: pointer;
+      @extend %transition;
+
+      &:hover {
+        background-color: $secondColor;
+      }
+    }
+
+    .advanced_search-button {
+      margin-right: 0;
+      margin-left: 18px;
+
+      &.active {
+        background-color: $secondColor;
+        color: #fff;
+      }
+      box-shadow: 1px 1px 20px rgba(0, 60, 134, 0.3);
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      cursor: pointer;
+      @extend %transition;
+
+      &:hover {
+        background-color: $secondColor;
+        color: #fff;
+      }
+    }
+  }
+}
+/*End provider search*/
+/**Start Search Advanced Section**/
+
+.search_advanced {
+  display: none;
+
+  .search_advanced-contnt {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 1px 1px 20px rgba(0, 60, 134, 0.3);
+    margin-top: 30px;
+
+    & div[class*="col"] {
+      @media (max-width:$lg) {
+        margin-bottom: 30px;
+      }
+    }
+
+    label {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+
+      i {
+        color: $mainColor;
+        font-size: 26px;
+      }
+
+      span {
+        margin: 0 8px;
+        color: $mainColor;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgba(64, 68, 106, 0.53);
+
+      &:focus {
+        outline: $secondColor!important;
+      }
+    }
+
+    .custum_select {
+      margin-top: 25px;
+      border-radius: 5px;
+    }
+
+    select {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid rgba(64, 68, 106, 0.53);
+      cursor: pointer;
+      width: 100%;
+      height: 46px;
+      padding: 0 10px;
+    }
+
+    .button_content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      @media (min-width:$lg) {
+        padding-top: 30px;
+      }
+
+      .button {
+        padding: 8px 30px;
+        cursor: pointer;
+        border: 0;
+      }
+
+      .apply_button {
+        margin: 0 20px;
+      }
+
+      .retern_button {
+        background-color: #fff;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        color: $mainColor;
+
+        &:hover {
+          background: $mainColor;
+          color: #fff;
+        }
+      }
+    }
+
+    .consult_type {
+      display: flex;
+
+      aside {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+
+        input {
+          display: block;
+          height: 15px;
+          width: 15px;
+          margin: 0 6px;
+          cursor: pointer;
+        }
+
+        span {}
+      }
+    }
+  }
+}
+
+.seach_button-content {
+  display: flex;
+  justify-content: space-between;
+}
+/**End Search Advanced Section**/

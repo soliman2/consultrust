@@ -1,0 +1,263 @@
+
+
+
+//=01=Start Popup Creat Account
+.container
+  // The Modal 
+  div(class="modal fade" id="creat_account")
+    div(class="modal-dialog modal-lg")
+      div(class="modal-content")
+      
+        // Modal Header 
+        div(class="modal-header")
+          button( type="button" class="close fas fa-times" data-dismiss="modal") 
+    
+        // Modal body 
+        div( class="modal-body")
+          h2.title اهلا بك معنا
+          span.sub_title يمكنك تسجيل الدخول بكل سهوله
+          
+          // Start List icon Registration
+          ul(class="list-unstyled list_registration-with")
+            //-Start List 
+            li
+              a(href="#") 
+                i(class="fab fa-google")
+                span: bdi Google انشاء حساب بواسطه  
+            //-End List    
+            //-Start List 
+            li
+              a(href="#" ) 
+                i(class="fab fa-twitter")
+                span: bdi Twitter انشاء حساب بواسطه 
+            //-End List 
+            //-Start List 
+            li
+              a(href="#") 
+                i(class="fab fa-facebook-f")
+                span: bdi Facebook انشاء حساب بواسطه 
+            //-End List 
+            //-Start List 
+            li()
+              a(href="#" data-toggle="modal" data-target="#sign_up" data-dismiss="modal") 
+                i(class="far fa-envelope")
+                span: bdi E-mail انشاء حساب بواسطه 
+            //-End List  
+          // End List icon Registration 
+          p(class="have_account paragraph_link") لديك حساب بالفعل؟
+            a(href="#" data-toggle="modal" data-target="#sign_in" data-dismiss="modal") سجل الان
+          p(class="accept_rols paragraph_link") بقيامك بالتسجيل فانت توافق على 
+            a(href="#")  الشروط والأحكام     
+//=01=End Popup Creat Account
+
+//=02=Start Popup Sign Up 
+.container
+  // The Modal 
+  div(class="modal fade" id="sign_up")
+    div(class="modal-dialog modal-lg")
+      div(class="modal-content")
+      
+        // Modal Header 
+        div(class="modal-header")
+          button( type="button" class="close fas fa-times" data-dismiss="modal") 
+    
+        // Modal body 
+        div( class="modal-body")
+          h2.title انشاء حساب
+          // Start Form content
+          form(class="glopal_form " action="index.html" method="post")
+            .row
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label الاسم الاول 
+                input(value="")
+              //- Start block
+              
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label الاسم الاخير 
+                input(value="")
+              //- Start block
+              
+            
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label البريد الالكتروني 
+                input(value="")
+              //- Start block
+              
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label اسم المستخدم 
+                input(value="")
+              //- Start block
+              
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label رقم الهاتف 
+                input(value="")
+              //- Start block
+              
+              //- Start block 
+              
+              
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                .select_content-area
+                  aside(class="select_your-tupe")
+                     label النوع 
+                     aside
+                      .select_type-content
+                        input(type="radio" name="select" value="Woman") 
+                        span أنثى  
+                        
+                      .select_type-content
+                        input(type="radio" name="select" value="Man") 
+                        span ذكر 
+
+                  aside(class="slect_Your-twon") 
+                    label البلد
+                    .custum_select
+                      select
+                        option(value="") اختر دولتك
+                        option(value="") مصر
+                        option(value="") اليمن 
+                        option(value="")  قطر
+                  
+              //- Start block
+              
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label كلمه السر 
+                input(value="" type="password")
+              //- Start block
+              
+              //- Start block 
+              div(class="col-sm-12 col-md-12 col-lg-6")
+                label تأكيد كلمه السر 
+                input(value="" type="password")
+              //- Start block
+            // End List icon Registration 
+            aside(class="sign_button-content")
+              button(class="button" type="submit" ) تسجيل   
+        
+        // Modal footer 
+        div( class="modal-footer")
+          span(data-dismiss="modal" data-toggle="modal" data-target="#creat_account") رجوع
+    //-End Popup one        
+//=02=End Popup Sign Up 
+
+
+//=03=Start Popup Sign In 
+.container
+  // The Modal 
+  div(class="modal fade" id="sign_in")
+    div(class="modal-dialog modal-lg")
+      div(class="modal-content")
+      
+        // Modal Header 
+        div(class="modal-header")
+          button( type="button" class="close fas fa-times" data-dismiss="modal") 
+    
+        // Modal body 
+        div( class="modal-body")
+          h2.title تسجيل الدخول
+          // Start Form content
+          form(class="glopal_form middel_form " action="index.html" method="post")
+            .row
+              //- Start block 
+              div(class="col-sm-12 ")
+                label اسم المستخدم او البريد الالكتروني 
+                input(value="" type="text")
+              //- Start block
+              
+              //- Start block 
+              div(class="col-sm-12 ")
+                label كلمه السر 
+                input(value="" type="password")
+              //- Start block
+            p(class="") 
+              a(href="#" data-dismiss="modal" data-toggle="modal" data-target="#forget_password")  نسيت كلمه السر؟  
+            
+          
+            // End List icon Registration 
+            aside(class="sign_button-content")
+              button(class="button" type="submit") تسجيل   
+            
+        
+          //Statr Registration with Social media
+          aside(class="sign_with-social")
+            p(class=" paragraph_link")  لا تملك حساب بعد؟
+              a(href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign_up") انشأ حساب؟
+            
+            h2 او سجل بواسطه
+            
+            // Start List icon Registration
+            ul(class="list_inline list_registration-with")
+              //-Start List 
+              li
+                a(href="#") 
+                  span Google 
+                  i(class="fab fa-google")
+                  
+              //-End List    
+              //-Start List 
+              li
+                a(href="#") 
+                  span Twitter 
+                  i(class="fab fa-twitter")
+                  
+              //-End List 
+              //-Start List 
+              li
+                a(href="#") 
+                  span Facebook 
+                  i(class="fab fa-facebook-f")
+                  
+              //-End List 
+            // End List icon Registration 
+          //End Registration with Social media  
+
+    //-End Popup one        
+//=03=End Popup Sign In 
+
+
+//=04=Start Forget password 
+.container
+  // The Modal 
+  div(class="modal fade" id="forget_password")
+    div(class="modal-dialog modal-lg")
+      div(class="modal-content")
+      
+        // Modal Header 
+        div(class="modal-header")
+          button( type="button" class="close fas fa-times" data-dismiss="modal") 
+    
+        // Modal body 
+        div( class="modal-body")
+          h2.title استرجاع كلمه السر
+          // Start Form content
+          form(class="glopal_form middel_form " action="index.html" method="post")
+            .row
+              //- Start block 
+              div(class="col-sm-12 ")
+                label ادخل البريد الالكترونى الخاص بك 
+                input(value="" type="text")
+              //- Start block
+            
+            
+          
+            // End List icon Registration 
+            aside(class="sign_button-content")
+              button(class="button" type="submit") ارسال
+          
+          //End Registration with Social media  
+          // Modal footer 
+          div( class="modal-footer")
+            span(data-dismiss="modal" data-toggle="modal" data-target="#sign_in") رجوع
+    //-End Popup one        
+//=04=End Forget password 
+
+         
+
+
+         

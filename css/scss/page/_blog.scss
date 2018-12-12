@@ -1,0 +1,111 @@
+@import "helpers/variables.scss";
+@import "componants/buttons.scss"; /**/
+/*Start Blog Page*/
+
+.special_articls {
+  margin-top: 50px;
+  padding: 50px 50px 0;
+  background-color: rgba(238, 238, 238, 0.33);
+}
+
+.other_articls {
+  margin-top: 50px;
+}
+
+.blog {
+  .home_page-title {
+    color: $redColor;
+
+    &:before {
+      background-color: $redColor;
+    }
+  }
+
+  .articl_block {
+    margin-bottom: 50px;
+  }
+}
+/*Start Special Articls*/
+.special_articls {}
+/*End Special Articls*/
+/*Start Articl Block*/
+.articl_block {
+  @media (max-width:$md) {
+    margin-bottom: 40px;
+  }
+
+  .article_image {
+    height: 200px;
+    width: 100%;
+  }
+  // Articl Description
+  .article_description {
+    @media (max-width:$md) {
+      margin-top: 20px;
+    }
+
+    .article_title {
+      font-size: 20px;
+    }
+
+    .paragraph_global {
+      font-size: 14px;
+    }
+  }
+  // Artics Subscription
+  .articls_subscription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    @media (max-width:$md) {
+      line-height: 40px;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-top: 30px;
+    }
+
+    .favorite_buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-content: flex-end;
+      @media (min-width:$md) {
+        margin-bottom: 60px;
+      }
+
+      li {
+        margin: 0 4px;
+      }
+    }
+
+    .articl_writer-content {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      p {
+        color: $mainColor;
+        margin: 0 8px;
+      }
+
+      aside {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
+/*End Articl Block*/
+/*End Blog Page*/

@@ -1,0 +1,136 @@
+@import "helpers/variables.scss";
+@import "componants/keyframs.scss";
+/**Slider Img Size */
+
+.header_slider-js {
+  @extend .header_slider;
+     .container {
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       align-content: center;
+
+       // @media (min-width: $lg) {
+       //   padding-top: 22%;
+       // }
+       //   @media (max-width: $lg) {
+       //     padding-top: 15%;
+       //   }
+     }
+}
+
+.header {
+  height: 100vh;
+  position: relative;
+
+
+  &:before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-image: linear-gradient(to right, rgba(0, 147, 255, 0.8), rgba(44, 56, 144, 0.8));
+  }
+
+
+
+  .header_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+
+    .header_content-description {
+      color: #fff;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        line-height: 40px;
+        font-size: 18px;
+        max-width: 500px;
+        margin-top: 20px;
+      }
+
+      .slider_button {
+        .button {
+          font-size: 16px;
+          color: $mainColor;
+          background-color: #fff;
+
+          &:hover {
+            background: $secondColor;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .header_content-app {
+      @media (max-width: $lg) {
+        display: none;
+      }
+
+      max-width: 350px;
+
+      .app_content {
+        img {
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+/*ٍStart Video Button*/
+
+.video {
+  &:focus {
+    outline: none !important;
+  }
+
+  margin: 0 50px;
+
+  @media (max-width: $lg) {
+    margin: 0 20px;
+  }
+
+  &.animation {
+    animation: move 1s linear infinite;
+  }
+
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 60px;
+  background-color: $secondColor;
+  display: inline-block;
+  cursor: pointer;
+  @extend %transition;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background-color: $mainColor;
+  }
+
+  img {
+    display: inline-block;
+  }
+}
+
+/*End Video Button*/
+/*Video Model Style*/
+
+.modal-title {
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}

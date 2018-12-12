@@ -1,0 +1,103 @@
+// Start Search Area 
+form( action="index.html" method="post")
+
+  .provider_search
+    .container
+      // Satrt Form
+      div(class="search_content row")
+        //-Start Category
+        div(class="col-sm-12 col-md-6 col-lg-4")
+          .custum_select
+            select
+              option التخصصات
+              option استشارت اسرية وعلمية
+              option تربية أطفال 
+              option علاقات زوجية
+        //-End Category
+        //-Start Search input
+        div(class="col-sm-12 col-md-6 col-lg-4")
+          input( type="text" name="" value="" placeholder="اسم الدكتور")
+        //-End Search input
+    
+        //-Start Button Submit
+        div(class="col-sm-12 col-md-6 col-lg-4")
+          .seach_button-content
+            button(type="button" class="search_button" name="button") 
+             i(class="fas fa-search") 
+            aside(class="advanced_search-button  " ) 
+                 span بحث متقدم
+                 i(class="fas fa-align-center")  
+        //-End Button Submit
+      
+
+          //-End Form  
+      //-End Button open Advanced search  
+      // End Form  
+  // End Search Area
+
+  // Start Search Advanced
+  .search_advanced
+    .container
+      .search_advanced-contnt  
+        .row
+          //-Start Input 1
+          div(class="col-sm-6 col-lg-3")
+            label
+              i( class="far fa-calendar-alt") 
+              span المواعيد المتاحة
+            input(type="date" name="bday" value="" min="1000-01-01"
+                  max="3000-12-31" class="form-control")
+                
+                
+
+            //-End Input 1
+          
+          //-Start Setion Cost
+          div(class="col-sm-6 col-lg-3")
+            label
+              i( class="fas fa-money-bill")
+              span  تكلفة الجلسة
+              .custum_select   
+                select
+                   option تكلفة الجلسة
+                   option 200 
+                   option 500
+                   option 600
+                   option 700
+          //-End Setion Cost
+          
+          //-Start Setion Time
+          div(class="col-sm-6 col-lg-3")
+            label
+              i( class="far fa-clock")
+              span  مدة الجلسة
+              .custum_select
+                select
+                   option مدة الجلسة
+                   option 200 
+                   option 500
+                   option 600
+                   option 700
+          //-End Setion Time
+          
+          //-Start Consultunt Type 
+          div(class="col-sm-6 col-lg-2")
+            label
+             i(class="fas fa-mars-double")
+             span  النوع
+            .consult_type
+              aside
+                input(type="checkbox" name="" value="") 
+                span أنثى 
+              aside
+                input(type="checkbox" name="" value="") 
+                span ذكر  
+          
+
+          div(class="col-sm-6 col-lg-1")
+            aside(class="button_content")
+              button(class="apply_button button" type="button" name="button" ) تطبيق
+              //- button(class="retern_button button" type="button" name="button" ) اعادة تعيين
+          //-End Consultunt Type
+
+// End Search Advanced
